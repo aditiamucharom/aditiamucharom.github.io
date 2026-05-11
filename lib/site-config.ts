@@ -12,6 +12,9 @@ export const siteConfig = {
   formspreeEndpoint: "https://formspree.io/f/mwvyanrl",
   // Leave empty to hide the "Download CV" button in the hero section.
   cvUrl: "",
+  // Path to profile photo (placed under /public). Leave empty to hide.
+  photoUrl: "/aditia.jpg",
+  photoAlt: "Portrait of Aditia Mucharom",
   social: {
     instagram: "https://www.instagram.com/aditiamucharom/",
   },
