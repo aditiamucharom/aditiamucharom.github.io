@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Instagram } from "lucide-react";
 import { projects } from "@/lib/projects-data";
@@ -34,17 +35,31 @@ export function Projects() {
               className="group relative flex flex-col overflow-hidden rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--muted))]/30 transition hover:border-brand/50 hover:bg-[rgb(var(--muted))]"
             >
               <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-brand/20 via-fuchsia-400/10 to-amber-300/20 dark:from-brand/25 dark:via-fuchsia-500/10 dark:to-amber-500/10">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-5xl font-black text-[rgb(var(--foreground))]/10">
-                    {p.title
-                      .split(/[\s.]+/)
-                      .filter(Boolean)
-                      .map((w) => w[0])
-                      .join("")
-                      .toUpperCase()
-                      .slice(0, 3)}
-                  </span>
-                </div>
+                {p.logo ? (
+                  <div className="absolute inset-0 flex items-center justify-center p-8 transition-transform duration-500 group-hover:scale-105">
+                    <div className="relative h-full w-full">
+                      <Image
+                        src={p.logo}
+                        alt={p.logoAlt ?? `${p.title} logo`}
+                        fill
+                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                        className="object-contain drop-shadow-sm"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="font-display text-5xl font-black text-[rgb(var(--foreground))]/10">
+                      {p.title
+                        .split(/[\s.]+/)
+                        .filter(Boolean)
+                        .map((w) => w[0])
+                        .join("")
+                        .toUpperCase()
+                        .slice(0, 3)}
+                    </span>
+                  </div>
+                )}
               </div>
 
               <div className="flex flex-1 flex-col p-6">
