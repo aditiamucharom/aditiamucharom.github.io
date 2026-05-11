@@ -10,7 +10,7 @@ export const siteConfig = {
   // Paste your Formspree endpoint here to enable the contact form.
   // Sign up free at https://formspree.io and replace the value below.
   // Example: "https://formspree.io/f/xxxxxxx"
-  formspreeEndpoint: "",
+  formspreeEndpoint: "https://formspree.io/f/mwvyanrl",
   cvUrl: "/cv.pdf",
   social: {
     github: "https://github.com/aditiamucharom",
