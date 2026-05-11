@@ -1,11 +1,8 @@
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 const socials = [
-  { href: siteConfig.social.github, label: "GitHub", icon: Github },
-  { href: siteConfig.social.linkedin, label: "LinkedIn", icon: Linkedin },
-  { href: siteConfig.social.twitter, label: "Twitter", icon: Twitter },
   { href: siteConfig.social.instagram, label: "Instagram", icon: Instagram },
   { href: `mailto:${siteConfig.email}`, label: "Email", icon: Mail },
 ];

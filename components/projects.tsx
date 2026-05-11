@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Instagram } from "lucide-react";
 import { projects } from "@/lib/projects-data";
+import { siteConfig } from "@/lib/site-config";
 
 export function Projects() {
   return (
@@ -14,14 +15,14 @@ export function Projects() {
         </p>
         <h2 className="section-title">Selected projects</h2>
         <p className="section-subtitle text-lg">
-          A handful of things I&apos;ve built recently. More on my{" "}
+          Beberapa project yang pernah saya kerjakan. Lihat lebih banyak di{" "}
           <Link
-            href="https://github.com/aditiamucharom"
+            href={siteConfig.social.instagram}
             className="underline underline-offset-4 hover:text-brand"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub
+            Instagram
           </Link>
           .
         </p>
@@ -36,16 +37,23 @@ export function Projects() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="font-display text-5xl font-black text-[rgb(var(--foreground))]/10">
                     {p.title
-                      .split(" ")
+                      .split(/[\s.]+/)
+                      .filter(Boolean)
                       .map((w) => w[0])
                       .join("")
-                      .toUpperCase()}
+                      .toUpperCase()
+                      .slice(0, 3)}
                   </span>
                 </div>
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-xl font-bold">{p.title}</h3>
+                {p.category && (
+                  <p className="text-xs font-semibold uppercase tracking-wider text-brand">
+                    {p.category}
+                  </p>
+                )}
+                <h3 className="mt-1 font-display text-xl font-bold">{p.title}</h3>
                 <p className="mt-2 flex-1 text-sm text-[rgb(var(--muted-foreground))]">
                   {p.description}
                 </p>
@@ -61,32 +69,32 @@ export function Projects() {
                   ))}
                 </div>
 
-                <div className="mt-5 flex items-center gap-2">
-                  {p.href && (
+                {p.href && (
+                  <div className="mt-5">
                     <Link
                       href={p.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline"
                     >
-                      Live <ArrowUpRight className="h-3.5 w-3.5" />
+                      Visit site <ArrowUpRight className="h-3.5 w-3.5" />
                     </Link>
-                  )}
-                  {p.repo && (
-                    <Link
-                      href={p.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`${p.title} source code`}
-                      className="ml-auto inline-flex h-8 w-8 items-center justify-center rounded-full border border-[rgb(var(--border))] hover:bg-[rgb(var(--background))] transition"
-                    >
-                      <Github className="h-4 w-4" />
-                    </Link>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            href={siteConfig.social.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-ghost"
+          >
+            <Instagram className="h-4 w-4" /> More work on Instagram
+          </Link>
         </div>
       </div>
     </section>

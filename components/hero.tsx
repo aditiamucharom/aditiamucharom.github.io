@@ -24,27 +24,24 @@ export function Hero() {
           Hi, I&apos;m {siteConfig.name.split(" ")[0]}.
           <br />
           <span className="bg-gradient-to-r from-brand via-fuchsia-500 to-amber-500 bg-clip-text text-transparent">
-            I build things
+            I craft visual stories
           </span>{" "}
-          for the web.
+          that connect.
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg sm:text-xl text-[rgb(var(--muted-foreground))] animate-fade-up [animation-delay:160ms]">
-          {siteConfig.role}. I craft fast, accessible, and beautifully detailed
-          digital experiences — from idea to production.
+          {siteConfig.role}. {siteConfig.description}
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3 animate-fade-up [animation-delay:240ms]">
           <Link href="#projects" className="btn-primary">
             View My Work <ArrowRight className="h-4 w-4" />
           </Link>
-          <a
-            href={siteConfig.cvUrl}
-            download
-            className="btn-ghost"
-          >
-            <Download className="h-4 w-4" /> Download CV
-          </a>
+          {siteConfig.cvUrl && (
+            <a href={siteConfig.cvUrl} download className="btn-ghost">
+              <Download className="h-4 w-4" /> Download CV
+            </a>
+          )}
         </div>
       </div>
     </section>

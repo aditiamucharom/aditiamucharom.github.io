@@ -1,22 +1,18 @@
 export const siteConfig = {
   name: "Aditia Mucharom",
-  title: "Aditia Mucharom — Portfolio",
+  title: "Aditia Mucharom — Visual Storyteller",
   author: "Aditia Mucharom",
-  role: "Developer & Builder",
+  role: "Visual Storyteller",
   description:
-    "Personal portfolio of Aditia Mucharom — developer, builder, and lifelong learner.",
+    "Creative professional focused on digital content, social media management, and minimal design.",
   url: "https://aditiamucharom.github.io",
-  email: "hello@example.com",
-  // Paste your Formspree endpoint here to enable the contact form.
-  // Sign up free at https://formspree.io and replace the value below.
-  // Example: "https://formspree.io/f/xxxxxxx"
+  email: "zucko007tv@gmail.com",
+  // Formspree endpoint — powers the contact form (no backend needed).
   formspreeEndpoint: "https://formspree.io/f/mwvyanrl",
-  cvUrl: "/cv.pdf",
+  // Leave empty to hide the "Download CV" button in the hero section.
+  cvUrl: "",
   social: {
-    github: "https://github.com/aditiamucharom",
-    linkedin: "https://www.linkedin.com/in/aditiamucharom",
-    twitter: "https://twitter.com/aditiamucharom",
-    instagram: "https://instagram.com/aditiamucharom",
+    instagram: "https://www.instagram.com/aditiamucharom/",
   },
 } as const;
 

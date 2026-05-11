@@ -55,8 +55,8 @@ export function Contact() {
         </p>
         <h2 className="section-title">Let&apos;s work together</h2>
         <p className="section-subtitle text-lg">
-          Have a project in mind, a question, or just want to say hi? Drop a
-          message and I&apos;ll get back to you.
+          Punya ide project, pertanyaan, atau sekadar mau ngobrol? Kirim pesan
+          dan saya akan balas secepatnya.
         </p>
 
         {!isConfigured && (

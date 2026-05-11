@@ -1,5 +1,6 @@
 export type Project = {
   title: string;
+  category?: string;
   description: string;
   tags: string[];
   image?: string;
@@ -9,26 +10,25 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Project One",
+    title: "Pesantara.id",
+    category: "Koperasi Digital & Marketplace",
     description:
-      "A short, punchy description of what the project does and the problem it solves.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    href: "https://example.com",
-    repo: "https://github.com/aditiamucharom",
+      "Platform koperasi digital yang menghubungkan komunitas lokal lewat pengalaman marketplace modern — dari branding, konten, hingga identitas visual.",
+    tags: ["Koperasi Digital", "Marketplace", "Brand Identity"],
+    href: "https://pesantara.id",
   },
   {
-    title: "Project Two",
+    title: "Ahwarumi Creative",
+    category: "Digital Marketing Agency",
     description:
-      "Another example project — replace this with real work, screenshots, and live demo links.",
-    tags: ["React", "Node.js", "PostgreSQL"],
-    href: "https://example.com",
-    repo: "https://github.com/aditiamucharom",
+      "Agensi digital marketing yang menghadirkan strategi konten, creative direction, dan kampanye end-to-end untuk brand yang ingin tumbuh.",
+    tags: ["Digital Marketing", "Content Strategy", "Creative Direction"],
   },
   {
-    title: "Project Three",
+    title: "Zucko Studios",
+    category: "Studio Kreatif",
     description:
-      "Showcase of a side project, design experiment, or open-source contribution.",
-    tags: ["Vite", "Three.js"],
-    repo: "https://github.com/aditiamucharom",
+      "Studio kreatif yang bergerak di ranah visual storytelling, desain minimalis, dan pembangunan identitas brand yang bermakna.",
+    tags: ["Creative Studio", "Visual Storytelling", "Minimal Design"],
   },
 ];

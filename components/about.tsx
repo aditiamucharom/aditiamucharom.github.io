@@ -1,29 +1,29 @@
-import { Code2, Palette, Rocket, Sparkles } from "lucide-react";
+import { Camera, Share2, PenTool, Sparkles } from "lucide-react";
 
 const highlights = [
   {
-    icon: Code2,
-    title: "Clean Code",
+    icon: Camera,
+    title: "Visual Storytelling",
     description:
-      "Readable, maintainable, and well-tested code that scales with the team.",
+      "Merangkai narasi lewat foto, video, dan desain — membuat cerita yang mudah dirasakan.",
   },
   {
-    icon: Palette,
-    title: "Design Sense",
+    icon: Share2,
+    title: "Social Media",
     description:
-      "A strong eye for detail — typography, spacing, motion, and interaction.",
+      "Strategi konten dan manajemen media sosial untuk menumbuhkan audiens dan kehadiran brand.",
   },
   {
-    icon: Rocket,
-    title: "Performance",
+    icon: PenTool,
+    title: "Digital Content",
     description:
-      "Fast-loading, accessible experiences built with modern web standards.",
+      "Dari konsep sampai publikasi — konten digital yang relevan untuk audiens modern.",
   },
   {
     icon: Sparkles,
-    title: "Craft",
+    title: "Minimal Craft",
     description:
-      "I care about the little things that make a product feel polished.",
+      "Desain minimalis yang berfokus pada kejelasan — membiarkan cerita berbicara lebih dulu.",
   },
 ];
 
@@ -36,10 +36,10 @@ export function About() {
         </p>
         <h2 className="section-title">A little about me</h2>
         <p className="section-subtitle text-lg">
-          I&apos;m a developer who enjoys turning ideas into real, usable
-          products. I work across the stack, but I have a soft spot for
-          thoughtful frontend work — the kind that feels fast and effortless to
-          use.
+          Saya seorang profesional kreatif yang berfokus pada konten digital,
+          manajemen media sosial, dan desain minimalis. Saya percaya cerita yang
+          baik lahir dari detail yang diperhatikan — dan itulah yang saya bawa
+          ke setiap project.
         </p>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
