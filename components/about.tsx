@@ -5,25 +5,25 @@ const highlights = [
     icon: Camera,
     title: "Visual Storytelling",
     description:
-      "Merangkai narasi lewat foto, video, dan desain — membuat cerita yang mudah dirasakan.",
+      "Merangkai narasi lewat foto, video, dan desain — cerita yang mudah dirasakan.",
   },
   {
     icon: Share2,
     title: "Social Media",
     description:
-      "Strategi konten dan manajemen media sosial untuk menumbuhkan audiens dan kehadiran brand.",
+      "Strategi konten dan manajemen media sosial untuk menumbuhkan brand presence.",
   },
   {
     icon: PenTool,
-    title: "Digital Content",
+    title: "Creative Direction",
     description:
-      "Dari konsep sampai publikasi — konten digital yang relevan untuk audiens modern.",
+      "Menerjemahkan visi brand menjadi sistem visual yang konsisten dan scalable.",
   },
   {
     icon: Sparkles,
-    title: "Minimal Craft",
+    title: "Minimal Systems",
     description:
-      "Desain minimalis yang berfokus pada kejelasan — membiarkan cerita berbicara lebih dulu.",
+      "Desain minimalis yang punya struktur — estetika bertemu dengan sistem yang rapi.",
   },
 ];
 
@@ -36,10 +36,12 @@ export function About() {
         </p>
         <h2 className="section-title">A little about me</h2>
         <p className="section-subtitle text-lg">
-          Saya seorang profesional kreatif yang berfokus pada konten digital,
-          manajemen media sosial, dan desain minimalis. Saya percaya cerita yang
-          baik lahir dari detail yang diperhatikan — dan itulah yang saya bawa
-          ke setiap project.
+          <strong className="text-[rgb(var(--foreground))]">
+            Creative Lead bridging aesthetics with systems.
+          </strong>{" "}
+          I help brands turn ideas into cohesive visual narratives — combining
+          creative direction with structured processes so stories scale without
+          losing soul.
         </p>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

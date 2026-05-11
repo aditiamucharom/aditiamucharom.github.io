@@ -24,13 +24,14 @@ export function Hero() {
           Hi, I&apos;m {siteConfig.name.split(" ")[0]}.
           <br />
           <span className="bg-gradient-to-r from-brand via-fuchsia-500 to-amber-500 bg-clip-text text-transparent">
-            I craft visual stories
+            Bridging aesthetics
           </span>{" "}
-          that connect.
+          with systems.
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg sm:text-xl text-[rgb(var(--muted-foreground))] animate-fade-up [animation-delay:160ms]">
-          {siteConfig.role}. {siteConfig.description}
+          {siteConfig.tagline}. Crafting visual stories that connect people,
+          brands, and communities — from strategy to screen.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-3 animate-fade-up [animation-delay:240ms]">

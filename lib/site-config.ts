@@ -3,8 +3,9 @@ export const siteConfig = {
   title: "Aditia Mucharom — Visual Storyteller",
   author: "Aditia Mucharom",
   role: "Visual Storyteller",
+  tagline: "Creative Lead | Bridging Aesthetics with Systems",
   description:
-    "Creative professional focused on digital content, social media management, and minimal design.",
+    "Creative Lead bridging aesthetics with systems — visual storytelling, digital content, and minimal design.",
   url: "https://aditiamucharom.github.io",
   email: "zucko007tv@gmail.com",
   // Formspree endpoint — powers the contact form (no backend needed).
