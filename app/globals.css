@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+  --muted: 241 245 249;
+  --muted-foreground: 100 116 139;
+  --border: 226 232 240;
+}
+
+.dark {
+  --background: 9 9 11;
+  --foreground: 248 250 252;
+  --muted: 24 24 27;
+  --muted-foreground: 161 161 170;
+  --border: 39 39 42;
+}
+
+@layer base {
+  * {
+    @apply border-[rgb(var(--border))];
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))] antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  ::selection {
+    @apply bg-brand/30 text-[rgb(var(--foreground))];
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight mb-2;
+  }
+  .section-subtitle {
+    @apply text-[rgb(var(--muted-foreground))] mb-10 max-w-2xl;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-brand-dark hover:shadow-brand/40 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-[rgb(var(--background))];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[rgb(var(--border))] px-6 py-3 text-sm font-semibold transition hover:bg-[rgb(var(--muted))] focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-[rgb(var(--background))];
+  }
+}
