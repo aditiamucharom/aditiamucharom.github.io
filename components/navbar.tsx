@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -32,9 +33,27 @@ export function Navbar() {
       }`}
     >
       <div className="container-page flex h-16 items-center justify-between">
-        <Link href="#top" className="font-display text-lg font-bold tracking-tight">
-          {siteConfig.name.split(" ")[0]}
-          <span className="text-brand">.</span>
+        <Link
+          href="#top"
+          className="group inline-flex items-center gap-2.5 font-display text-lg font-bold tracking-tight"
+          aria-label={`${siteConfig.name} — home`}
+        >
+          {siteConfig.photoUrl && (
+            <span className="relative inline-flex h-9 w-9 shrink-0 overflow-hidden rounded-full ring-2 ring-brand/40 ring-offset-2 ring-offset-[rgb(var(--background))] transition group-hover:ring-brand">
+              <Image
+                src={siteConfig.photoUrl}
+                alt=""
+                width={853}
+                height={1280}
+                sizes="36px"
+                className="h-full w-full object-cover object-[center_20%]"
+              />
+            </span>
+          )}
+          <span>
+            {siteConfig.name.split(" ")[0]}
+            <span className="text-brand">.</span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

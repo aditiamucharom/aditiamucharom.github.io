@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { Camera, Share2, PenTool, Sparkles } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
 
 const highlights = [
   {
@@ -35,14 +37,45 @@ export function About() {
           About
         </p>
         <h2 className="section-title">A little about me</h2>
-        <p className="section-subtitle text-lg">
-          <strong className="text-[rgb(var(--foreground))]">
-            Creative Lead bridging aesthetics with systems.
-          </strong>{" "}
-          I help brands turn ideas into cohesive visual narratives — combining
-          creative direction with structured processes so stories scale without
-          losing soul.
-        </p>
+
+        {/* Photo + bio side-by-side on md+, stacked on mobile */}
+        <div className="grid items-center gap-10 md:grid-cols-[auto_1fr] md:gap-12 mb-14">
+          {siteConfig.photoUrl && (
+            <div className="relative mx-auto md:mx-0">
+              <div
+                aria-hidden
+                className="absolute -inset-2 -z-10 rounded-full bg-gradient-to-br from-brand/30 via-fuchsia-400/20 to-amber-300/20 blur-xl"
+              />
+              <div className="relative h-44 w-44 overflow-hidden rounded-full border-4 border-[rgb(var(--background))] shadow-xl ring-2 ring-brand/40 sm:h-56 sm:w-56">
+                <Image
+                  src={siteConfig.photoUrl}
+                  alt={siteConfig.photoAlt}
+                  width={853}
+                  height={1280}
+                  sizes="(max-width: 640px) 11rem, 14rem"
+                  className="h-full w-full object-cover object-[center_20%]"
+                />
+              </div>
+            </div>
+          )}
+
+          <div>
+            <p className="text-lg sm:text-xl leading-relaxed">
+              <strong className="text-[rgb(var(--foreground))]">
+                Creative Lead bridging aesthetics with systems.
+              </strong>{" "}
+              I help brands turn ideas into cohesive visual narratives —
+              combining creative direction with structured processes so stories
+              scale without losing soul.
+            </p>
+            <p className="mt-4 text-[rgb(var(--muted-foreground))]">
+              Saya berfokus pada visual storytelling, manajemen media sosial,
+              dan desain minimalis yang berbicara. Setiap project adalah
+              kesempatan untuk menghubungkan brand dengan audiensnya lewat
+              cerita yang tulus.
+            </p>
+          </div>
+        </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map(({ icon: Icon, title, description }) => (
