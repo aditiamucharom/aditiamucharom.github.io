@@ -32,7 +32,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        # Use `npm install` instead of `npm ci` because we don't commit a
+        # Use `npm ci` instead of `npm ci` because we don't commit a
         # package-lock.json. The `--no-audit --no-fund` flags keep output clean.
         # `--legacy-peer-deps` avoids ERESOLVE errors from React 19 peer ranges.
         run: npm install --no-audit --no-fund --legacy-peer-deps
