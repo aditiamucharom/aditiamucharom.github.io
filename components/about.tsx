@@ -7,25 +7,25 @@ const highlights = [
     icon: Camera,
     title: "Visual Storytelling",
     description:
-      "Merangkai narasi lewat foto, video, dan desain — cerita yang mudah dirasakan.",
+      "Mengubah ide menjadi narasi visual yang mudah dipahami, dirasakan, dan diingat.",
   },
   {
     icon: Share2,
-    title: "Social Media",
+    title: "Content Strategy",
     description:
-      "Strategi konten dan manajemen media sosial untuk menumbuhkan brand presence.",
+      "Menyusun arah konten, pilar pesan, dan format yang relevan untuk audiens.",
   },
   {
     icon: PenTool,
     title: "Creative Direction",
     description:
-      "Menerjemahkan visi brand menjadi sistem visual yang konsisten dan scalable.",
+      "Menjaga visual, tone, dan eksekusi kreatif tetap selaras di setiap touchpoint.",
   },
   {
     icon: Sparkles,
-    title: "Minimal Systems",
+    title: "Brand Systems",
     description:
-      "Desain minimalis yang punya struktur — estetika bertemu dengan sistem yang rapi.",
+      "Membangun struktur identitas yang rapi agar brand mudah dipakai ulang dan berkembang.",
   },
 ];
 
@@ -34,9 +34,11 @@ export function About() {
     <section id="about" className="py-24 sm:py-32">
       <div className="container-page">
         <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">
-          About
+          Tentang
         </p>
-        <h2 className="section-title">A little about me</h2>
+        <h2 className="section-title">
+          Creative direction yang rapi dan terasa manusia.
+        </h2>
 
         {/* Photo + bio side-by-side on md+, stacked on mobile */}
         <div className="grid items-center gap-10 md:grid-cols-[auto_1fr] md:gap-12 mb-14">
@@ -62,17 +64,18 @@ export function About() {
           <div>
             <p className="text-lg sm:text-xl leading-relaxed">
               <strong className="text-[rgb(var(--foreground))]">
-                Creative Lead bridging aesthetics with systems.
+                Saya membantu brand menemukan cara tampil yang bukan cuma
+                menarik, tapi juga jelas, konsisten, dan mudah dipercaya.
               </strong>{" "}
-              I help brands turn ideas into cohesive visual narratives —
-              combining creative direction with structured processes so stories
-              scale without losing soul.
+              Fokus saya ada di visual storytelling, strategi konten, dan
+              sistem kreatif yang membuat ide besar bisa dieksekusi dengan
+              arah yang terukur.
             </p>
             <p className="mt-4 text-[rgb(var(--muted-foreground))]">
-              Saya berfokus pada visual storytelling, manajemen media sosial,
-              dan desain minimalis yang berbicara. Setiap project adalah
-              kesempatan untuk menghubungkan brand dengan audiensnya lewat
-              cerita yang tulus.
+              Dari identitas visual, kampanye media sosial, sampai narasi
+              komunitas, saya menggabungkan rasa estetika dengan proses yang
+              sistematis agar brand punya wajah, suara, dan ritme komunikasi
+              yang lebih solid.
             </p>
           </div>
         </div>

@@ -12,11 +12,12 @@ export function Projects() {
     >
       <div className="container-page">
         <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">
-          Work
+          Karya
         </p>
-        <h2 className="section-title">Selected projects</h2>
+        <h2 className="section-title">Project yang membentuk cara saya bekerja.</h2>
         <p className="section-subtitle text-lg">
-          Beberapa project yang pernah saya kerjakan. Lihat lebih banyak di{" "}
+          Pilihan project yang menunjukkan perpaduan strategi, visual, dan
+          sistem kreatif. Dokumentasi visual lain bisa dilihat di{" "}
           <Link
             href={siteConfig.social.instagram}
             className="underline underline-offset-4 hover:text-brand"
@@ -73,6 +74,40 @@ export function Projects() {
                   {p.description}
                 </p>
 
+                <dl className="mt-5 grid gap-3 border-t border-[rgb(var(--border))] pt-5 text-sm">
+                  <div>
+                    <dt className="font-semibold text-[rgb(var(--foreground))]">
+                      Peran
+                    </dt>
+                    <dd className="mt-1 text-[rgb(var(--muted-foreground))]">
+                      {p.role}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-[rgb(var(--foreground))]">
+                      Fokus
+                    </dt>
+                    <dd className="mt-2 flex flex-wrap gap-1.5">
+                      {p.scope.map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-full bg-brand/10 px-2.5 py-0.5 text-xs font-medium text-brand"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-semibold text-[rgb(var(--foreground))]">
+                      Hasil
+                    </dt>
+                    <dd className="mt-1 text-[rgb(var(--muted-foreground))]">
+                      {p.outcome}
+                    </dd>
+                  </div>
+                </dl>
+
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {p.tags.map((tag) => (
                     <span
@@ -92,7 +127,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline"
                     >
-                      Visit site <ArrowUpRight className="h-3.5 w-3.5" />
+                      Kunjungi site <ArrowUpRight className="h-3.5 w-3.5" />
                     </Link>
                   </div>
                 )}
@@ -108,7 +143,7 @@ export function Projects() {
             rel="noopener noreferrer"
             className="btn-ghost"
           >
-            <Instagram className="h-4 w-4" /> More work on Instagram
+            <Instagram className="h-4 w-4" /> Lihat karya lain di Instagram
           </Link>
         </div>
       </div>

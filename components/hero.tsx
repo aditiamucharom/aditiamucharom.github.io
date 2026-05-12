@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 export function Hero() {
@@ -18,26 +18,30 @@ export function Hero() {
           <div className="order-1">
             <p className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--muted))]/50 px-4 py-1.5 text-xs font-medium text-[rgb(var(--muted-foreground))] animate-fade-up">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              Available for new projects
+              Terbuka untuk project kreatif baru
             </p>
 
             <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95] animate-fade-up [animation-delay:80ms]">
-              Hi, I&apos;m {siteConfig.name.split(" ")[0]}.
+              Saya bantu brand
               <br />
               <span className="bg-gradient-to-r from-brand via-fuchsia-500 to-amber-500 bg-clip-text text-transparent">
-                Bridging aesthetics
+                tampil lebih jelas
               </span>{" "}
-              with systems.
+              dan dipercaya.
             </h1>
 
             <p className="mt-6 max-w-xl text-lg sm:text-xl text-[rgb(var(--muted-foreground))] animate-fade-up [animation-delay:160ms]">
-              {siteConfig.tagline}. Crafting visual stories that connect
-              people, brands, and communities — from strategy to screen.
+              {siteConfig.name} adalah {siteConfig.role} yang merancang
+              narasi visual, strategi konten, dan sistem identitas agar cerita
+              brand terasa konsisten dari ide sampai layar.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-3 animate-fade-up [animation-delay:240ms]">
               <Link href="#projects" className="btn-primary">
-                View My Work <ArrowRight className="h-4 w-4" />
+                Lihat Karya <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link href="#contact" className="btn-ghost">
+                <MessageCircle className="h-4 w-4" /> Diskusikan Project
               </Link>
               {siteConfig.cvUrl && (
                 <a href={siteConfig.cvUrl} download className="btn-ghost">
