@@ -8,9 +8,9 @@ import { ThemeToggle } from "./theme-toggle";
 import { siteConfig } from "@/lib/site-config";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "Tentang" },
+  { href: "#projects", label: "Karya" },
+  { href: "#contact", label: "Kontak" },
 ];
 
 export function Navbar() {
