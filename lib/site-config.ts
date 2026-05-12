@@ -3,9 +3,9 @@ export const siteConfig = {
   title: "Aditia Mucharom — Visual Storyteller",
   author: "Aditia Mucharom",
   role: "Visual Storyteller",
-  tagline: "Creative Lead | Bridging Aesthetics with Systems",
+  tagline: "Creative Lead untuk brand, komunitas, dan produk digital",
   description:
-    "Creative Lead dan visual storyteller yang membantu brand membangun narasi visual, strategi konten, dan sistem desain yang konsisten.",
+    "Aditia Mucharom adalah Creative Lead dan visual storyteller yang membantu brand, komunitas, dan produk digital membangun narasi visual yang rapi, konsisten, dan mudah dipercaya.",
   url: "https://aditiamucharom.com",
   email: "zucko007tv@gmail.com",
   // Formspree endpoint — powers the contact form (no backend needed).
