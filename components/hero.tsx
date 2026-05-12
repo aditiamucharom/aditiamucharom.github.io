@@ -12,16 +12,16 @@ export function Hero() {
         <div className="absolute bottom-0 right-0 h-[320px] w-[320px] translate-x-1/3 translate-y-1/3 rounded-full bg-fuchsia-400/20 blur-3xl dark:bg-fuchsia-500/10" />
       </div>
 
-      <div className="container-page flex min-h-[calc(100vh-4rem)] flex-col justify-center py-24">
+      <div className="container-page flex flex-col justify-center py-16 sm:py-20 lg:min-h-[calc(100vh-4rem)] lg:py-24">
         <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
           {/* LEFT: text */}
-          <div className="order-2 lg:order-1">
+          <div className="order-1">
             <p className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--muted))]/50 px-4 py-1.5 text-xs font-medium text-[rgb(var(--muted-foreground))] animate-fade-up">
               <span className="h-2 w-2 rounded-full bg-emerald-500" />
               Available for new projects
             </p>
 
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95] animate-fade-up [animation-delay:80ms]">
+            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95] animate-fade-up [animation-delay:80ms]">
               Hi, I&apos;m {siteConfig.name.split(" ")[0]}.
               <br />
               <span className="bg-gradient-to-r from-brand via-fuchsia-500 to-amber-500 bg-clip-text text-transparent">
@@ -49,7 +49,7 @@ export function Hero() {
 
           {/* RIGHT: photo */}
           {siteConfig.photoUrl && (
-            <div className="relative order-1 mx-auto w-full max-w-sm lg:order-2 lg:max-w-none animate-fade-up [animation-delay:320ms]">
+            <div className="relative order-2 mx-auto w-full max-w-[18rem] sm:max-w-sm lg:max-w-none animate-fade-up [animation-delay:320ms]">
               {/* Decorative backdrop */}
               <div
                 aria-hidden
