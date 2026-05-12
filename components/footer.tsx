@@ -14,7 +14,7 @@ export function Footer() {
     <footer className="border-t border-[rgb(var(--border))] py-10">
       <div className="container-page flex flex-col items-center justify-between gap-6 sm:flex-row">
         <p className="text-sm text-[rgb(var(--muted-foreground))]">
-          &copy; {year} {siteConfig.name}. Built with Passion.
+          &copy; {year} {siteConfig.name}. Visual stories, built with care.
         </p>
 
         <div className="flex items-center gap-1">
