@@ -21,25 +21,48 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
+    default: siteConfig.title,
     template: `%s — ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ["portfolio", "developer", siteConfig.author, "web developer"],
+  keywords: [
+    "Aditia Mucharom",
+    "visual storyteller",
+    "creative lead",
+    "creative direction",
+    "content strategy",
+    "social media",
+    "brand identity",
+  ],
   authors: [{ name: siteConfig.author, url: siteConfig.url }],
   creator: siteConfig.author,
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "id_ID",
     url: siteConfig.url,
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/aditia.jpg",
+        width: 853,
+        height: 1280,
+        alt: siteConfig.photoAlt,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
+    images: ["/aditia.jpg"],
   },
 };
 
@@ -48,7 +71,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang="en"
+      lang="id"
       className={`${inter.variable} ${spaceGrotesk.variable}`}
       suppressHydrationWarning
     >

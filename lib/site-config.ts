@@ -5,8 +5,8 @@ export const siteConfig = {
   role: "Visual Storyteller",
   tagline: "Creative Lead | Bridging Aesthetics with Systems",
   description:
-    "Creative Lead bridging aesthetics with systems — visual storytelling, digital content, and minimal design.",
-  url: "https://aditiamucharom.github.io",
+    "Creative Lead dan visual storyteller yang membantu brand membangun narasi visual, strategi konten, dan sistem desain yang konsisten.",
+  url: "https://aditiamucharom.com",
   email: "zucko007tv@gmail.com",
   // Formspree endpoint — powers the contact form (no backend needed).
   formspreeEndpoint: "https://formspree.io/f/mwvyanrl",
