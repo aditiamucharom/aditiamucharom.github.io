@@ -36,11 +36,11 @@ export function Contact() {
       } else {
         const payload = await res.json().catch(() => ({}));
         setStatus("error");
-        setErrorMsg(payload?.error || "Something went wrong. Please try again.");
+        setErrorMsg(payload?.error || "Pesan belum terkirim. Silakan coba lagi.");
       }
     } catch {
       setStatus("error");
-      setErrorMsg("Network error. Please try again.");
+      setErrorMsg("Koneksi bermasalah. Silakan coba lagi.");
     }
   }
 
@@ -51,19 +51,20 @@ export function Contact() {
     >
       <div className="container-page max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-brand mb-3">
-          Contact
+          Kontak
         </p>
-        <h2 className="section-title">Let&apos;s work together</h2>
+        <h2 className="section-title">Punya brand story yang perlu dirapikan?</h2>
         <p className="section-subtitle text-lg">
-          Punya ide project, pertanyaan, atau sekadar mau ngobrol? Kirim pesan
-          dan saya akan balas secepatnya.
+          Ceritakan kebutuhan brand, campaign, konten, atau identitas visual
+          yang sedang ingin dibangun. Saya akan balas dengan arah awal yang
+          bisa langsung kita diskusikan.
         </p>
 
         {!isConfigured && (
           <div className="mb-6 flex items-start gap-3 rounded-xl border border-amber-400/40 bg-amber-50 p-4 text-sm text-amber-900 dark:bg-amber-950/40 dark:text-amber-200">
             <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
             <div>
-              <strong>Form not configured yet.</strong> Sign up at{" "}
+              <strong>Form belum dikonfigurasi.</strong> Daftar di{" "}
               <a
                 href="https://formspree.io"
                 target="_blank"
@@ -72,11 +73,11 @@ export function Contact() {
               >
                 formspree.io
               </a>{" "}
-              (free) and paste your endpoint into{" "}
+              (free) lalu masukkan endpoint ke{" "}
               <code className="rounded bg-amber-100 px-1 py-0.5 text-xs dark:bg-amber-900/50">
                 lib/site-config.ts → formspreeEndpoint
               </code>
-              . Meanwhile, you can email me at{" "}
+              . Sementara itu, Anda bisa email ke{" "}
               <a
                 href={`mailto:${siteConfig.email}`}
                 className="underline underline-offset-2"
@@ -92,7 +93,7 @@ export function Contact() {
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
               <label htmlFor="name" className="mb-1.5 block text-sm font-medium">
-                Name
+                Nama
               </label>
               <input
                 id="name"
@@ -100,7 +101,7 @@ export function Contact() {
                 type="text"
                 required
                 autoComplete="name"
-                placeholder="Your name"
+                placeholder="Nama Anda"
                 className="w-full rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--background))] px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/30"
               />
             </div>
@@ -122,14 +123,14 @@ export function Contact() {
 
           <div>
             <label htmlFor="message" className="mb-1.5 block text-sm font-medium">
-              Message
+              Pesan
             </label>
             <textarea
               id="message"
               name="message"
               required
               rows={6}
-              placeholder="Tell me about your project, idea, or just say hi..."
+              placeholder="Ceritakan project, target audiens, timeline, atau masalah visual yang ingin dibereskan..."
               className="w-full resize-none rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--background))] px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/30"
             />
           </div>
@@ -144,22 +145,22 @@ export function Contact() {
               className="btn-primary disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === "submitting" ? (
-                "Sending..."
+                "Mengirim..."
               ) : (
                 <>
-                  <Send className="h-4 w-4" /> Send message
+                  <Send className="h-4 w-4" /> Kirim pesan
                 </>
               )}
             </button>
 
             <a href={`mailto:${siteConfig.email}`} className="btn-ghost">
-              <Mail className="h-4 w-4" /> Email directly
+              <Mail className="h-4 w-4" /> Email langsung
             </a>
           </div>
 
           {status === "success" && (
             <p className="inline-flex items-center gap-2 text-sm text-emerald-600 dark:text-emerald-400">
-              <CheckCircle2 className="h-4 w-4" /> Thanks! Your message has been sent.
+              <CheckCircle2 className="h-4 w-4" /> Terima kasih. Pesan Anda sudah terkirim.
             </p>
           )}
           {status === "error" && (
