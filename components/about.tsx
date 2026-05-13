@@ -37,7 +37,7 @@ export function About() {
           Tentang
         </p>
         <h2 className="section-title">
-          Saya membantu brand menyusun visual, konten, dan komunikasi yang terasa lebih terarah, konsisten, dan memiliki identitas yang kuat.
+          Creative direction untuk brand yang ingin tampil lebih serius.
         </h2>
 
         {/* Photo + bio side-by-side on md+, stacked on mobile */}
