@@ -8,9 +8,10 @@ import { ThemeToggle } from "./theme-toggle";
 import { siteConfig } from "@/lib/site-config";
 
 const navLinks = [
-  { href: "#about", label: "Tentang" },
-  { href: "#projects", label: "Karya" },
-  { href: "#contact", label: "Kontak" },
+  { href: "/#about", label: "Tentang" },
+  { href: "/#projects", label: "Karya" },
+  { href: "/resources", label: "Resources" },
+  { href: "/#contact", label: "Kontak" },
 ];
 
 export function Navbar() {
@@ -34,7 +35,7 @@ export function Navbar() {
     >
       <div className="container-page flex h-16 items-center justify-between">
         <Link
-          href="#top"
+          href="/#top"
           className="group inline-flex items-center gap-2.5 font-display text-lg font-bold tracking-tight"
           aria-label={`${siteConfig.name} — home`}
         >
